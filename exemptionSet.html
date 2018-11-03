@@ -1,0 +1,80 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>免单规则配置</title>
+  <style type="text/css">
+    .bodyList {
+      margin: 10px 40px;
+    }
+
+    .button {
+      float: right;
+      margin-right: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="../exemptionSet.js"></script>
+  <div id="app">
+    <div>
+      默认配置邀请人数：<input type="number" v-model="bodyDefaultNum" />
+    </div>
+    <hr />
+    <div>
+      <div>
+        特殊名单：<input type="button" class="button" value="添加特殊名单">
+      </div>
+      <div class="bodyList">
+        特殊默认配置邀请人数：<input type="number" name="specialDefaultNum" />
+        特殊商品pItemId: <input type="number" name="pItemId" />
+        <input type="button" class="button" value="删除本条">
+        <br />
+        <hr />
+        <div>
+          规则（1）：开始已售出数量：<input type="number" name="startNumber" />
+          结束已售出数量：<input type="number" name="endNumber" />
+          需要邀请人数量：<input type="number" name="inviterNumber" />
+          <input type="button" value="删除">
+          <input type="button" class="button" value="下一条规则">
+        </div>
+      </div>
+
+    </div>
+    <div>
+      <hr />
+      <div>
+        普通名单：<input type="button" class="button" value="添加普通名单">
+      </div>
+      <div class="bodyList">
+        普通默认配置邀请人数：<input type="number" name="commonDefaultNum" />
+        开始商品价格（单位：分）: <input type="number" name="startPrice" />
+        结束商品价格（单位：分）: <input type="number" name="endPrice" />
+        <input type="button" class="button" value="删除本条">
+        <br />
+        <hr />
+
+        <div>
+          规则（1）：开始已售出数量：<input type="number" name="startNumber" />
+          结束已售出数量：<input type="number" name="endNumber" />
+          需要邀请人数量：<input type="number" name="inviterNumber" />
+          <input type="button" value="删除">
+        </div>
+        <hr />
+
+        <div>
+          规则（1）：开始已售出数量：<input type="number" name="startNumber" />
+          结束已售出数量：<input type="number" name="endNumber" />
+          需要邀请人数量：<input type="number" name="inviterNumber" />
+          <input type="button" value="删除">
+          <input type="button" class="button" value="下一条规则">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
